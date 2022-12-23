@@ -51,5 +51,25 @@ public class HelloworldController {
 
 		return "process-data-v2";
 	}
+	
+	// RequestParam -> spring will do it for us  String theName = request.getParameter("studentName");
+		@RequestMapping("/processFormV3")
+		public String processFormVersionThree(@RequestParam("studentName") String studentName,@RequestParam("studentPassword") String studentPassword, Model model) {
+
+
+			// convert the data to upper case 
+			// Do your logic
+			studentName = studentName.toUpperCase();
+			studentPassword = studentPassword.toUpperCase();
+
+			int len = studentPassword.length();
+			System.out.println(len);
+			// add the message to the model
+			model.addAttribute("studentName", studentName);
+			model.addAttribute("studentPassword", studentPassword);
+			model.addAttribute("len", len);
+
+			return "process-data-v3";
+		}
 
 }
