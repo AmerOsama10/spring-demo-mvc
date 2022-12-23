@@ -7,6 +7,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+// 1-explain controller
+// view simple data
+// use httpServletRequest
+// use @Requestparam
+// setting attributes
+
+
 @Controller
 @RequestMapping("")
 public class HelloworldController {

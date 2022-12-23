@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+// 2- explaining request mapping
+
 @Controller
 @RequestMapping("/silly")
 public class SillyController {
