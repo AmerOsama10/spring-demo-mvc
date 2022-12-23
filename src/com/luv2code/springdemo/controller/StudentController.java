@@ -16,7 +16,7 @@ public class StudentController {
 	// need a controller method to show the initial HTML form.
 	@RequestMapping("/showForm")
 	public String showStudentForm() {
-		return "student-view/student-form";
+		return "student-view-without-mvc-tags/student-form";
 	}
 	
 
@@ -36,7 +36,7 @@ public class StudentController {
 		model.addAttribute("studentAge", studentAge);
 		model.addAttribute("studentGender", studentGender);
 
-		return "student-view/student-data-v1";
+		return "student-view-without-mvc-tags/student-data-v1";
 	}
 	
 	@RequestMapping("/studentDataV2")
@@ -56,6 +56,6 @@ public class StudentController {
 		//add the object 
 		model.addAttribute("student", s);
 		
-		return "student-view/student-data-v2";
+		return "student-view-without-mvc-tags/student-data-v2";
 	}
 }
