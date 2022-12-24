@@ -4,7 +4,8 @@ public class Student {
 	String name;
 	String age;
 	String gender;
-
+	String counrty;
+	
 	public String getName() {
 		return name;
 	}
@@ -27,6 +28,14 @@ public class Student {
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public String getCounrty() {
+		return counrty;
+	}
+
+	public void setCounrty(String counrty) {
+		this.counrty = counrty;
 	}
 
 }

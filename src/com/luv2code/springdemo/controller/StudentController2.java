@@ -29,8 +29,7 @@ public class StudentController2 {
 	@RequestMapping("/studentDataV1")
 	public String ShowStudentDataV1(@ModelAttribute("student") Student student) {
 
-		//log the input data
-		System.out.println("student name is : "+student.getName());
+		
 		return "student-view-with-mvc-tags/student-data-v1";
 	}
 

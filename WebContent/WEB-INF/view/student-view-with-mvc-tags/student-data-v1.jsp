@@ -5,7 +5,17 @@
 <body>
 
 <!-- it will call getter methods student.getname ..... -->
-Student is confirmed : ${student.name} ${student.age} ${student.gender}
+<h3>Student is confirmed  </h3>
+
+${student.name} 
+<br>
+${student.age}
+<br>
+${student.gender}
+<br>
+${student.counrty}
+<br>
+
 
 </body>
 
