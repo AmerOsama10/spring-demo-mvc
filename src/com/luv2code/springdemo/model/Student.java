@@ -1,10 +1,22 @@
 package com.luv2code.springdemo.model;
 
+import java.util.LinkedHashMap;
+
 public class Student {
 	String name;
 	String age;
 	String gender;
 	String counrty;
+	LinkedHashMap<String, String> countryOptions;
+	
+	public Student(){
+		countryOptions = new LinkedHashMap<>();
+		countryOptions.put("BR", "Brazil");
+		countryOptions.put("EG", "Egypt");
+		countryOptions.put("USA", "United States");
+		countryOptions.put("GE", "Germany");
+
+	}
 	
 	public String getName() {
 		return name;
@@ -36,6 +48,14 @@ public class Student {
 
 	public void setCounrty(String counrty) {
 		this.counrty = counrty;
+	}
+
+	public LinkedHashMap<String, String> getCountryOptions() {
+		return countryOptions;
+	}
+
+	public void setCountryOptions(LinkedHashMap<String, String> countryOptions) {
+		this.countryOptions = countryOptions;
 	}
 
 }
