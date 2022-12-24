@@ -17,9 +17,10 @@ public class StudentController2 {
 
 	@RequestMapping("/showForm")
 	public String showStudentForm(Model model) {
-		//create student object
+		// 1- create student object
 		Student student = new Student();
-		// add student object to the model
+		
+		// 2- add the object as an attribute in the model
 		model.addAttribute("student", student);
 		return "student-view-with-mvc-tags/student-form";
 		// when form is loaded spring MVC will call getter method -student.getName(); -student.getAge();
@@ -27,8 +28,9 @@ public class StudentController2 {
 	}
 
 	@RequestMapping("/studentDataV1")
+	
+	// 5- use my attribute in my page
 	public String ShowStudentDataV1(@ModelAttribute("student") Student student) {
-
 		
 		return "student-view-with-mvc-tags/student-data-v1";
 	}

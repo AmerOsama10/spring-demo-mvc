@@ -5,10 +5,15 @@ import java.util.LinkedHashMap;
 public class Student {
 	String name;
 	String age;
+	// we can select only one gender
 	String gender;
-	String counrty;
+	// we can select only one country within the LinkedHashMap
+	String country;
 	LinkedHashMap<String, String> countryOptions;
-	
+	String Course;
+	// we can select multiple operating system
+	String[] operatingSystem;
+
 	public Student(){
 		countryOptions = new LinkedHashMap<>();
 		countryOptions.put("BR", "Brazil");
@@ -42,12 +47,12 @@ public class Student {
 		this.gender = gender;
 	}
 
-	public String getCounrty() {
-		return counrty;
+	public String getCountry() {
+		return country;
 	}
 
-	public void setCounrty(String counrty) {
-		this.counrty = counrty;
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 	public LinkedHashMap<String, String> getCountryOptions() {
@@ -56,6 +61,22 @@ public class Student {
 
 	public void setCountryOptions(LinkedHashMap<String, String> countryOptions) {
 		this.countryOptions = countryOptions;
+	}
+
+	public String getCourse() {
+		return Course;
+	}
+
+	public void setCourse(String course) {
+		Course = course;
+	}
+
+	public String[] getOperatingSystem() {
+		return operatingSystem;
+	}
+
+	public void setOperatingSystem(String[] operatingSystem) {
+		this.operatingSystem = operatingSystem;
 	}
 
 }
