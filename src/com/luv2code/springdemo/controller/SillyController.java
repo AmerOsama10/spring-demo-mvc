@@ -14,7 +14,7 @@ public class SillyController {
 	// need a controller method to show the initial HTML form.
 	@RequestMapping("/showForm")
 	public String showForm() {
-		return "show-form";
+		return "upper-view/show-form";
 	}
 	
 
@@ -34,6 +34,6 @@ public class SillyController {
 		model.addAttribute("studentPassword", studentPassword);
 		model.addAttribute("len", len);
 
-		return "process-data-v3";
+		return "upper-view/process-data-v3";
 	}
 }

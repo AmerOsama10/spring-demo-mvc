@@ -27,13 +27,13 @@ public class HelloworldController {
 	// need a controller method to show the initial HTML form.
 	@RequestMapping("/showForm")
 	public String showForm() {
-		return "show-form";
+		return "upper-view/show-form";
 	}
 
 	// need a controller method to process the HTML form.
 	@RequestMapping("/processFormV1")
 	public String processForm() {
-		return "process-data-v1";
+		return "upper-view/process-data-v1";
 	}
 
 	// new a controller method to read form data and
@@ -57,7 +57,7 @@ public class HelloworldController {
 		model.addAttribute("studentPassword", studentPassword);
 		model.addAttribute("len", len);
 
-		return "process-data-v2";
+		return "upper-view/process-data-v2";
 	}
 	
 	// RequestParam -> spring will do it for us  String theName = request.getParameter("studentName");
@@ -77,7 +77,7 @@ public class HelloworldController {
 			model.addAttribute("studentPassword", studentPassword);
 			model.addAttribute("len", len);
 
-			return "process-data-v3";
+			return "upper-view/process-data-v3";
 		}
 
 }

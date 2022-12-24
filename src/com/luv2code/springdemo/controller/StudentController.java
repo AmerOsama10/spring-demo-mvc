@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 //2- explain spring without MVC Form tags
+//   use student-view-without-mvc-tags folder
 
 @Controller
 @RequestMapping("/student")
@@ -19,43 +20,29 @@ public class StudentController {
 		return "student-view-without-mvc-tags/student-form";
 	}
 	
-
+	
 	@RequestMapping("/studentDataV1")
-	public String ShowStudentDataV1(@RequestParam("studentName") String studentName,@RequestParam("studentAge") String studentAge,@RequestParam("studentGender") String studentGender, Model model) {
-
-
-		// convert the data to upper case 
-		// Do your logic
-		studentName = studentName.toUpperCase();
-		studentAge = studentAge.toUpperCase();
-		studentGender = studentGender.toUpperCase();
-
+	public String ShowStudentDataV2(@RequestParam("studentName") String studentName,@RequestParam("studentAge") String studentAge,@RequestParam("studentGender") String studentGender, Model model) {
 		
-		// add the message to the model
+		//make some logic
+		studentName=studentName.toUpperCase();
+		studentAge=studentAge.toUpperCase();
+		studentGender=studentGender.toUpperCase();
+		
+		//1- we can use parameters @RequestParam to send data to page
+		
+		//2- we can use attributes to send data to page
 		model.addAttribute("studentName", studentName);
 		model.addAttribute("studentAge", studentAge);
 		model.addAttribute("studentGender", studentGender);
+		
+		//3- we can use object to send data to page
+		Student student = new Student();
+		student.setName(studentName);
+		student.setAge(studentAge);
+		student.setGender(studentGender);
+		model.addAttribute("student", student);
 
 		return "student-view-without-mvc-tags/student-data-v1";
-	}
-	
-	@RequestMapping("/studentDataV2")
-	public String ShowStudentDataV2(@RequestParam("studentName") String studentName,@RequestParam("studentAge") String studentAge,@RequestParam("studentGender") String studentGender, Model model) {
-
-
-		Student s = new Student();
-		s.setName(studentName);
-		s.setAge(studentAge);
-		s.setGender(studentGender);
-
-		//adding every variable
-		model.addAttribute("studentName", studentName);
-		model.addAttribute("studentAge", studentAge);
-		model.addAttribute("studentGender", studentGender);
-
-		//add the object 
-		model.addAttribute("student", s);
-		
-		return "student-view-without-mvc-tags/student-data-v2";
 	}
 }
