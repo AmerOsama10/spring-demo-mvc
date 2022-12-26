@@ -12,6 +12,7 @@
 	<br><br> 
 	lastName is : ${customer.lastName}
 	<br>
+	freePasses is : ${customer.freePasses}
 
 
 </body>
