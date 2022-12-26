@@ -4,9 +4,12 @@ import javax.validation.Valid;
 
 import com.luv2code.springdemo.model.Customer;
 
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -15,6 +18,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
+	
+	//Pre process all web requests into our controller
+	@InitBinder
+	public void initBinder(WebDataBinder dataBinder) {
+		
+		//defined in spring API
+		//removes white space leading and trailing
+		//true means trim to null if it entirely all white space
+		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
+		dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
+	}
 
 	@RequestMapping("/showForm")
 	public String showStudentForm(Model model) {
@@ -35,5 +49,7 @@ public class CustomerController {
 			return "student-view-with-validation/customer-data";
 
 	}
+
+	
 
 }
