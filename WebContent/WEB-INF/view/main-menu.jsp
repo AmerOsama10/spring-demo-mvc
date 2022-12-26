@@ -11,6 +11,8 @@
 	<li><a href="silly/showForm">silly controller</a></li>
 	<li><a href="student/showForm">student form without MVC tag</a></li>
 	<li><a href="student2/showForm">student form with MVC tag</a></li>
+	<li><a href="customer/showForm">validation</a></li>
+	
 	</ul>
 
 
