@@ -6,7 +6,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-import com.luv2code.springdemo.mvc.validation.CourseCode;
+import com.luv2code.springdemo.mvc.customer.annotations.CourseCode;
+import com.luv2code.springdemo.mvc.customer.annotations.Phone;
+
 
 public class Customer {
 
@@ -27,6 +29,9 @@ public class Customer {
 	
 	@CourseCode(value="A",message="must start with A")
 	private String courseCode;
+	
+	@Phone(value={"A","B"},message="must start with A Or B")
+	private String phone;
 
 	public String getFirstName() {
 		return firstName;
@@ -68,6 +73,14 @@ public class Customer {
 
 	public void setCourseCode(String courseCode) {
 		this.courseCode = courseCode;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 }

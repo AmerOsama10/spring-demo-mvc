@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.mvc.validation;
+package com.luv2code.springdemo.mvc.customer.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,6 +7,8 @@ import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
+
+import com.luv2code.springdemo.mvc.customer.validator.CourseCodeConstraintValidator;
 
 //contains logic
 @Constraint(validatedBy = CourseCodeConstraintValidator.class)
