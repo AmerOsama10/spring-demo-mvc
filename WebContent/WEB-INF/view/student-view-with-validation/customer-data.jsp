@@ -9,11 +9,12 @@
 	<h3>Customer is confirmed</h3>
 	<hr>
 	firstName is : ${customer.firstName}
-	<br><br> 
+	<br><br>
 	lastName is : ${customer.lastName}
-	<br>
+	<br><br>
 	freePasses is : ${customer.freePasses}
-
+	<br><br>
+	freePasses is : ${customer.postalCode}
 
 </body>
 
