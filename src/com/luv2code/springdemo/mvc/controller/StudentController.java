@@ -1,6 +1,6 @@
-package com.luv2code.springdemo.controller;
+package com.luv2code.springdemo.mvc.controller;
 
-import com.luv2code.springdemo.model.Student;
+import com.luv2code.springdemo.mvc.model.Student;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

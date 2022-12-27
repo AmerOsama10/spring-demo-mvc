@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.model;
+package com.luv2code.springdemo.mvc.model;
 
 import java.util.LinkedHashMap;
 

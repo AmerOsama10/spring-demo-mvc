@@ -1,8 +1,8 @@
-package com.luv2code.springdemo.controller;
+package com.luv2code.springdemo.mvc.controller;
 
 import javax.validation.Valid;
 
-import com.luv2code.springdemo.model.Customer;
+import com.luv2code.springdemo.mvc.model.Customer;
 
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;

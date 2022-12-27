@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.controller;
+package com.luv2code.springdemo.mvc.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
