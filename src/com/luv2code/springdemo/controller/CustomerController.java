@@ -43,6 +43,7 @@ public class CustomerController {
 	public String processValidation(@Valid @ModelAttribute("customer") Customer customer,
 			BindingResult theBindingResult) {
 
+			System.out.println("theBindingResult is : " +theBindingResult);
 		if (theBindingResult.hasErrors())
 			return "student-view-with-validation/customer-form";
 		else
